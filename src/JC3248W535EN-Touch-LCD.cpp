@@ -73,7 +73,6 @@ void JC3248W535EN::setColor(uint8_t r, uint8_t g, uint8_t b) {
 
 void JC3248W535EN::clear(uint8_t r, uint8_t g, uint8_t b) {
     gfx->fillScreen(rgb(r, g, b));
-    gfx->flush();
 }
 void JC3248W535EN::flush() {
     gfx->flush();
@@ -90,7 +89,6 @@ void JC3248W535EN::drawFillRect(int16_t x, int16_t y, int16_t w, int16_t h) {
     if (px + pw > 320) pw = 320 - px;
     if (py + ph > 480) ph = 480 - py;
     gfx->fillRect(px, py, pw, ph, currentColor);
-    gfx->flush();
 }
 // Drawing functions implementation
 void JC3248W535EN::drawFillRect2(int16_t x, int16_t y, int16_t w, int16_t h) {
@@ -114,7 +112,6 @@ void JC3248W535EN::drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1) {
     
     // Draw the line with the current color
     gfx->drawLine(px0, py0, px1, py1, currentColor);
-    gfx->flush();
 }
 
 void JC3248W535EN::drawRect(int16_t x, int16_t y, int16_t w, int16_t h) {
@@ -127,21 +124,18 @@ void JC3248W535EN::drawRect(int16_t x, int16_t y, int16_t w, int16_t h) {
     if (px + pw > 320) pw = 320 - px;
     if (py + ph > 480) ph = 480 - py;
     gfx->drawRect(px, py, pw, ph, currentColor);
-    gfx->flush();
 }
 
 void JC3248W535EN::drawFillCircle(int16_t x, int16_t y, int16_t radius) {
     int16_t px = 320 - y;
     int16_t py = x;
     gfx->fillCircle(px, py, radius, currentColor);
-    gfx->flush();
 }
 
 void JC3248W535EN::drawCircleOutline(int16_t x, int16_t y, int16_t radius) {
     int16_t px = 320 - y;
     int16_t py = x;
     gfx->drawCircle(px, py, radius, currentColor);
-    gfx->flush();
 }
 
 void JC3248W535EN::drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2) {
@@ -154,7 +148,6 @@ void JC3248W535EN::drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, 
     int16_t py2 = x2;
     
     gfx->drawTriangle(px0, py0, px1, py1, px2, py2, currentColor);
-    gfx->flush();
 }
 
 void JC3248W535EN::drawFillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2) {
@@ -167,7 +160,6 @@ void JC3248W535EN::drawFillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t 
     int16_t py2 = x2;
     
     gfx->fillTriangle(px0, py0, px1, py1, px2, py2, currentColor);
-    gfx->flush();
 }
 
 void JC3248W535EN::drawRoundRect(int16_t x, int16_t y, int16_t w, int16_t h, int16_t radius) {
@@ -181,7 +173,6 @@ void JC3248W535EN::drawRoundRect(int16_t x, int16_t y, int16_t w, int16_t h, int
     if (py + ph > 480) ph = 480 - py;
     
     gfx->drawRoundRect(px, py, pw, ph, radius, currentColor);
-    gfx->flush();
 }
 
 void JC3248W535EN::drawFillRoundRect(int16_t x, int16_t y, int16_t w, int16_t h, int16_t radius) {
@@ -195,7 +186,6 @@ void JC3248W535EN::drawFillRoundRect(int16_t x, int16_t y, int16_t w, int16_t h,
     if (py + ph > 480) ph = 480 - py;
     
     gfx->fillRoundRect(px, py, pw, ph, radius, currentColor);
-    gfx->flush();
 }
 
 void JC3248W535EN::drawEllipse(int16_t x, int16_t y, int16_t rx, int16_t ry) {
@@ -204,7 +194,6 @@ void JC3248W535EN::drawEllipse(int16_t x, int16_t y, int16_t rx, int16_t ry) {
     
     // Note: ellipses might need swapping rx and ry due to orientation change
     gfx->drawEllipse(px, py, ry, rx, currentColor);
-    gfx->flush();
 }
 
 void JC3248W535EN::drawFillEllipse(int16_t x, int16_t y, int16_t rx, int16_t ry) {
@@ -213,7 +202,6 @@ void JC3248W535EN::drawFillEllipse(int16_t x, int16_t y, int16_t rx, int16_t ry)
     
     // Note: ellipses might need swapping rx and ry due to orientation change
     gfx->fillEllipse(px, py, ry, rx, currentColor);
-    gfx->flush();
 }
 
 void JC3248W535EN::prt(const String &text, int x, int y, uint8_t size) {
@@ -224,7 +212,6 @@ void JC3248W535EN::prt(const String &text, int x, int y, uint8_t size) {
     gfx->setCursor(x, y);
     gfx->println(text);
     gfx->setRotation(originalRotation);
-    gfx->flush();
 }
 
 bool JC3248W535EN::getTouchPoint(uint16_t &x, uint16_t &y) {
