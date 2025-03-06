@@ -98,7 +98,116 @@ void JC3248W535EN::drawFillRect2(int16_t x, int16_t y, int16_t w, int16_t h) {
     gfx->fillRect(px, py, pw, ph, currentColor);
 }
 
-// ... Rest of the drawing functions, implemented exactly as in your original code ...
+void JC3248W535EN::drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1) {
+    // Convert coordinates to match the screen orientation
+    int16_t px0 = 320 - y0;
+    int16_t py0 = x0;
+    int16_t px1 = 320 - y1;
+    int16_t py1 = x1;
+    
+    // Draw the line with the current color
+    gfx->drawLine(px0, py0, px1, py1, currentColor);
+    gfx->flush();
+}
+
+void JC3248W535EN::drawRect(int16_t x, int16_t y, int16_t w, int16_t h) {
+    int16_t px = 320 - (y + h);
+    int16_t py = x;
+    int16_t pw = h;
+    int16_t ph = w;
+    if (px < 0) px = 0;
+    if (py < 0) py = 0;
+    if (px + pw > 320) pw = 320 - px;
+    if (py + ph > 480) ph = 480 - py;
+    gfx->drawRect(px, py, pw, ph, currentColor);
+    gfx->flush();
+}
+
+void JC3248W535EN::drawFillCircle(int16_t x, int16_t y, int16_t radius) {
+    int16_t px = 320 - y;
+    int16_t py = x;
+    gfx->fillCircle(px, py, radius, currentColor);
+    gfx->flush();
+}
+
+void JC3248W535EN::drawCircleOutline(int16_t x, int16_t y, int16_t radius) {
+    int16_t px = 320 - y;
+    int16_t py = x;
+    gfx->drawCircle(px, py, radius, currentColor);
+    gfx->flush();
+}
+
+void JC3248W535EN::drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2) {
+    // Convert coordinates to match screen orientation
+    int16_t px0 = 320 - y0;
+    int16_t py0 = x0;
+    int16_t px1 = 320 - y1;
+    int16_t py1 = x1;
+    int16_t px2 = 320 - y2;
+    int16_t py2 = x2;
+    
+    gfx->drawTriangle(px0, py0, px1, py1, px2, py2, currentColor);
+    gfx->flush();
+}
+
+void JC3248W535EN::drawFillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2) {
+    // Convert coordinates to match screen orientation
+    int16_t px0 = 320 - y0;
+    int16_t py0 = x0;
+    int16_t px1 = 320 - y1;
+    int16_t py1 = x1;
+    int16_t px2 = 320 - y2;
+    int16_t py2 = x2;
+    
+    gfx->fillTriangle(px0, py0, px1, py1, px2, py2, currentColor);
+    gfx->flush();
+}
+
+void JC3248W535EN::drawRoundRect(int16_t x, int16_t y, int16_t w, int16_t h, int16_t radius) {
+    int16_t px = 320 - (y + h);
+    int16_t py = x;
+    int16_t pw = h;
+    int16_t ph = w;
+    if (px < 0) px = 0;
+    if (py < 0) py = 0;
+    if (px + pw > 320) pw = 320 - px;
+    if (py + ph > 480) ph = 480 - py;
+    
+    gfx->drawRoundRect(px, py, pw, ph, radius, currentColor);
+    gfx->flush();
+}
+
+void JC3248W535EN::drawFillRoundRect(int16_t x, int16_t y, int16_t w, int16_t h, int16_t radius) {
+    int16_t px = 320 - (y + h);
+    int16_t py = x;
+    int16_t pw = h;
+    int16_t ph = w;
+    if (px < 0) px = 0;
+    if (py < 0) py = 0;
+    if (px + pw > 320) pw = 320 - px;
+    if (py + ph > 480) ph = 480 - py;
+    
+    gfx->fillRoundRect(px, py, pw, ph, radius, currentColor);
+    gfx->flush();
+}
+
+void JC3248W535EN::drawEllipse(int16_t x, int16_t y, int16_t rx, int16_t ry) {
+    int16_t px = 320 - y;
+    int16_t py = x;
+    
+    // Note: ellipses might need swapping rx and ry due to orientation change
+    gfx->drawEllipse(px, py, ry, rx, currentColor);
+    gfx->flush();
+}
+
+void JC3248W535EN::drawFillEllipse(int16_t x, int16_t y, int16_t rx, int16_t ry) {
+    int16_t px = 320 - y;
+    int16_t py = x;
+    
+    // Note: ellipses might need swapping rx and ry due to orientation change
+    gfx->fillEllipse(px, py, ry, rx, currentColor);
+    gfx->flush();
+}
 
 void JC3248W535EN::prt(const String &text, int x, int y, uint8_t size) {
     uint8_t originalRotation = gfx->getRotation();

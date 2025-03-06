@@ -30,6 +30,31 @@ To use this library, you'll need to install:
 3. Copy the files into your Arduino project directory
 4. Include the library in your sketch
 
+Arduino IDE Setup: 
+For the JC3248W535EN, use ESP332S3 Dev module board. 
+Set up as follow: 
+
+USB CDC On Boot: "Enabled" // Important for Serial communication
+CPU Frequency: "240MHz (WiFi)"
+Core Debug Level: "None"
+USB DFU On Boot: "Disabled"
+Erase All Flash Before Sketch Upload: "Disabled"
+Events Run On: "Core 1"
+Flash Mode: "QIO 80MHz"
+Flash Size: "16MB (128Mb)"
+JTAG Adapter: "Disabled"
+Arduino Runs On: "Core 1"
+USB Firmware MSC On Boot: "Disabled"
+Partition Scheme: "8M with spiffs (3MB APP/1.5MB SPIFFS)"
+PSRAM: "OPI PSRAM"
+Upload Mode: "UART0 / Hardware CDC"
+Upload Speed: "921600"
+USB Mode: "Hardware CDC and JTAG"
+Zigbee Mode: "Disabled"
+
+
+Tools 
+
 ## Usage Examples
 
 ### Basic Initialization
