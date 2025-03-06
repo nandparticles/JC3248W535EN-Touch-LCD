@@ -2,6 +2,8 @@
 
 A simple, lightweight library to drive the JC3248W535EN touch LCD display from Guition without requiring LVGL. This library provides an easy way to get started with your display using basic drawing functions and touch support.
 
+Display: https://www.aliexpress.com/item/1005007566315926.html
+
 ## Overview
 
 Many users struggle to get started with the JC3248W535EN display after purchasing it. This library serves as an excellent starting point, abstracting away the complex initialization and providing an intuitive API for common display operations.
@@ -26,10 +28,24 @@ To use this library, you'll need to install:
 
 ## Installation
 
-1. Install the required dependencies using the Arduino Library Manager
-2. Download this repository as ZIP or clone it
-3. Copy the files into your Arduino project directory
-4. Include the library in your sketch
+### Using Arduino IDE Library Manager (Recommended)
+
+1. Open Arduino IDE
+2. Go to Sketch -> Include Library -> Manage Libraries...
+3. Search for "JC3248W535EN"
+4. Click Install
+
+### Manual Installation
+
+1. Download this repository as ZIP
+2. In Arduino IDE, go to Sketch -> Include Library -> Add .ZIP Library...
+3. Select the downloaded ZIP file
+4. Restart Arduino IDE
+
+### Required Dependencies
+
+Install these libraries using Arduino Library Manager:
+1. [Arduino_GFX_Library](https://github.com/moononournation/Arduino_GFX_Library)
 
 Arduino IDE Setup: 
 For the JC3248W535EN, use ESP332S3 Dev module board. 
