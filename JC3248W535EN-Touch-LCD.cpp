@@ -1,3 +1,10 @@
+
+/**
+ *  Made by AudunKodehode
+ *
+ *  See: https://github.com/AudunKodehode/JC3248W535EN-Touch-LCD
+ */
+
 #include "JC3248W535EN-Touch-LCD.h"
 #include "qrcode_helper.h" // https://github.com/ricmoo/QRCode
 

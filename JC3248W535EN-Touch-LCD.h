@@ -1,3 +1,9 @@
+/**
+ *  Made by AudunKodehode
+ *
+ *  See: https://github.com/AudunKodehode/JC3248W535EN-Touch-LCD
+ */
+
 #ifndef JC3248W535EN_TOUCH_LCD_H
 #define JC3248W535EN_TOUCH_LCD_H
 
