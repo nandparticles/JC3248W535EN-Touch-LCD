@@ -1,5 +1,5 @@
 #include "JC3248W535EN-Touch-LCD.h"
-#include "qrcode_gen.h"
+#include "qrcode_gen.h" // https://github.com/ricmoo/QRCode
 
 // Pin definitions
 #define GFX_BL 1
