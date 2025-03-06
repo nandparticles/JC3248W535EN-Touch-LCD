@@ -1,6 +1,8 @@
 #ifndef JC3248W535EN_TOUCH_LCD_H
 #define JC3248W535EN_TOUCH_LCD_H
 
+
+
 #include <Arduino.h>
 #include <Arduino_GFX_Library.h>
 #include <Wire.h>

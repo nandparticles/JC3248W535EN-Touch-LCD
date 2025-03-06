@@ -14,6 +14,7 @@ Many users struggle to get started with the JC3248W535EN display after purchasin
 - Touch input handling
 - QR code generation and display
 - Portrait orientation support
+- Example with command-line screen-design feature, featuring a python GUI designer.
 
 ## Dependencies
 
