@@ -30,6 +30,7 @@ prt	KEYWORD2
 flush	KEYWORD2
 getTouchPoint	KEYWORD2
 drawQRCode	KEYWORD2
+setFont	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
