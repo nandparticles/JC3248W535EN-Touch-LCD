@@ -1,4 +1,3 @@
-
 /**
  *  Made by AudunKodehode
  *
@@ -76,6 +75,10 @@ void JC3248W535EN::clear(uint8_t r, uint8_t g, uint8_t b) {
 }
 void JC3248W535EN::flush() {
     gfx->flush();
+}
+
+void JC3248W535EN::setFont(const GFXfont* font) {
+    gfx->setFont(font);
 }
 
 // Drawing functions implementation

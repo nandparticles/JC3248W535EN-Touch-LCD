@@ -69,6 +69,7 @@ public:
     void drawQRCode(const char* data, uint16_t x, uint16_t y, uint8_t moduleSize = 4,
                     uint8_t bgColorR = 255, uint8_t bgColorG = 255, uint8_t bgColorB = 255,
                     uint8_t fgColorR = 0, uint8_t fgColorG = 0, uint8_t fgColorB = 0);
+    void setFont(const GFXfont* font);
 };
 
 #endif
