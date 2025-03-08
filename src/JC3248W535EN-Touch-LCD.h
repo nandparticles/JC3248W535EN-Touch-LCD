@@ -10,7 +10,7 @@
 
 
 #include <Arduino.h>
-#include <Arduino_GFX_Library/Arduino_GFX_Library.h>
+#include <Arduino_GFX_Library.h>
 #include <Wire.h>
 #include <Preferences.h>
 
