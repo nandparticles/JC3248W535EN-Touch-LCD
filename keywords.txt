@@ -31,6 +31,11 @@ flush	KEYWORD2
 getTouchPoint	KEYWORD2
 drawQRCode	KEYWORD2
 setFont	KEYWORD2
+image	KEYWORD2
+fetchJpeg	KEYWORD2
+loadImageFromUrl	KEYWORD2
+getPixel	KEYWORD2
+drawFillRect2	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
