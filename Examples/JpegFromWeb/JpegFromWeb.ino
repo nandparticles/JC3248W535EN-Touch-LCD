@@ -27,7 +27,7 @@ void setup() {
 
   connectToWiFi();
   Serial.println("Loading image from the internet...");
-  screen.loadImageFromUrl("https://github.com/AudunKodehode/JC3248W535EN-Touch-LCD/blob/main/Examples/JpegFromWeb/480x320.jpg?raw=true", 0, 0);
+  screen.loadImageFromUrl("https://raw.githubusercontent.com/AudunKodehode/JC3248W535EN-Touch-LCD/refs/heads/main/Examples/JpegFromWeb/480x320.jpg", 0, 0);
   screen.flush();
 }
 
