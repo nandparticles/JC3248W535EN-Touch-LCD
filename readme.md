@@ -174,7 +174,7 @@ void setup() {
   screen.clear(255, 255, 255);
   
   // Draw a QR code (centered on screen)
-  screen.drawQRCode("https://github.com/yourusername/JC3248W535EN-Touch-LCD", 
+  screen.drawQRCode("https://github.com/AudunKodehode/JC3248W535EN-Touch-LCD", 
                    60, 120, 4, 255, 255, 255, 0, 0, 0);
                    
   screen.setColor(0, 0, 0);
